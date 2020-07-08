@@ -219,85 +219,10 @@ section#knowledge a:hover {
 }
 
 section#knowledge a img {
-  width: 48px;
+  width: 32px;
 }
 
 section#knowledge a h4 {
-  margin: 0px;
-  color: #3a3a3a;
-}
-
-section#projects {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-section#projects a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  padding: 4px 16px 4px 16px;
-  margin: 4px;
-  border: 1px solid #ccc;
-  width: 256px;
-  text-align: center;
-  -webkit-animation: button .1s ease;
-          animation: button .1s ease;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
-  border-radius: 4px;
-  text-decoration: none;
-}
-
-section#projects a:hover {
-  -webkit-animation: button-hover .1s ease;
-          animation: button-hover .1s ease;
-  -webkit-box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.1);
-  -webkit-transform: translateY(-1px);
-          transform: translateY(-1px);
-}
-
-section#projects a img {
-  width: 64px;
-}
-
-section#projects a h4 {
   margin: 0px;
   color: #3a3a3a;
 }
