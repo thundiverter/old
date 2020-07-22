@@ -292,48 +292,4 @@ footer #social {
     display: none;
   }
 }
-
-@media (min-width: 2500px) {
-  header {
-    max-width: 1280px;
-  }
-  header h1 {
-    font-size: 96px;
-  }
-  header p {
-    font-size: 36px;
-  }
-  header img#logo {
-    width: 320px;
-  }
-  section {
-    max-width: 1280px;
-  }
-  section h2 {
-    font-size: 48px;
-  }
-  footer {
-    max-width: 1280px;
-  }
-  footer h2 {
-    font-size: 48px;
-  }
-  footer form {
-    -webkit-transform: translateX(8px);
-            transform: translateX(8px);
-  }
-  footer form p {
-    font-size: 28px;
-  }
-  footer form input, footer form textarea {
-    font-size: 32px;
-    padding: 12px 32px 12px 32px;
-  }
-  footer form button {
-    font-size: 32px;
-  }
-  footer form button#button img {
-    width: 96px;
-  }
-}
 /*# sourceMappingURL=style.css.map */
