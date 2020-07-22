@@ -1,0 +1,166 @@
+body {
+    width: 100%;
+    margin: 0 auto;
+    border-top: 10px solid #2e75b6;
+
+    font-family: Inter;
+}
+*::selection { background-color: #5b9bd5; color: #ffffff; }
+
+#whitespace { width: 100%; background-color: #ffffff; }
+#grayspace { width: 100%; background-color: #e8e8e8; }
+#footerspace { width: 100%; background-color: #2E75B6; }
+
+header {
+    max-width: 780px;
+    margin: 16px auto 32px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    img { width: 200px; }
+    h1 { font-size: 52px; margin: 0px; }
+    p { font-size: 115%; margin: 0px 0px 0px 4px; }
+    flex-wrap: wrap;
+    #micon { width: 64px; }
+}
+
+section {
+    max-width: 780px;
+    margin: 0 auto;
+    padding-top: 32px;
+    h2 { display: inline-block; font-size: 28px; font-weight: 900; margin: 0px 0px 0px 4px; padding-bottom: 2px; border-bottom: 4px solid black; }
+}
+section#list {
+    max-width: 840px;
+    padding-bottom: 32px;
+    display: flex;
+    flex: 1 1 auto; flex-wrap: wrap;
+    justify-content: flex-start; align-items: stretch;
+    #know {
+        display: flex;
+        max-width: 44%;
+        justify-content: space-around; align-items: center;
+        padding: 16px;
+        background-color: #F7F7F7;
+        border-radius: 8px;
+        margin: 8px;
+        color: black;
+        text-decoration: none;
+        div { padding-left: 16px; }
+        h3, p { margin: 4px; }
+    }
+}
+.knowhover {
+    transform: translateY(0px);
+    /*border: 1px solid darken(#F7F7F7, 5%);*/
+}
+.knowhover:hover {
+    transform: translateY(-1px);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, .1);
+    cursor: pointer;
+}
+
+footer {
+    max-width: 780px;
+    margin: 0 auto; padding: 32px 0px 16px 0px;
+    display: flex; justify-content: space-between; align-items: stretch;
+    color: #ffffff;
+
+    h2 { display: inline-block; font-size: 28px; font-weight: 900; margin: 0px 0px 0px 4px; padding-bottom: 2px; border-bottom: 4px solid #ffffff; }
+    form { margin: 8px 0px 8px 0px; }
+    form p { margin: 8px 0px 4px 0px; font-size: 90%; }
+    form button {
+        border: none; border-radius: 8px; outline: none; background-color: #BDD7EE; padding: 12px 48px 12px 48px; font-family: Inter; margin-top: 8px; font-weight: 600; font-size: 100%;
+        &:hover {
+            background-color: darken(#BDD7EE, 10%);  cursor: pointer;
+        }
+    }
+    #button {
+        border: none; border-radius: 8px; outline: none; background-color: #BDD7EE; padding: 12px; font-family: Inter; margin: 4px;
+        &:hover {
+            background-color: darken(#BDD7EE, 10%); cursor: pointer;
+        }
+    }
+    input, textarea {
+        border: none; outline: none;
+        background-color: #255F93;
+        padding: 6px 12px 6px 12px; font-family: Inter; color: #fff;
+        font-size: 16px; width: 100%;
+        &:focus { background-color: #20517E; }
+    }
+    #social {
+        width: 196px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 800px) {
+    header {
+        justify-content: space-around;
+    }
+    section, section#list {
+        h2 {
+            margin-left: 24px;
+        }
+        width: 100vw;
+        #list {
+            justify-content: center;
+        }
+        #know {
+            min-width: 90%;
+            justify-content: flex-start;
+        }
+        #desc { padding-left: 24px; }
+    }
+    footer {
+        padding: 24px;
+        form {
+            margin: 6px;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    footer {
+        flex-direction: column-reverse;
+        form { margin-right: 30px; }
+        div#social { width: 100%; margin-bottom: 16px; }
+    }
+}
+
+@media (max-width: 540px) {
+    header img#logo { display: none }
+}
+
+@media (min-width: 2500px) {
+
+    header {
+        max-width: 1280px;
+        h1 { font-size: 96px; }
+        p { font-size: 36px; }
+        img#logo { width: 320px; }
+    }
+
+    section {
+        max-width: 1280px;
+        h2 { font-size: 48px; }
+    }
+
+    footer {
+        max-width: 1280px;
+        h2 { font-size: 48px; }
+
+        form {
+            transform: translateX(8px);
+            p { font-size: 28px; }
+            input, textarea { font-size: 32px; padding: 12px 32px 12px 32px; }
+            button { font-size: 32px; }
+            button#button img { width: 96px; }
+        }
+    }
+}
