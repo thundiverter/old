@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Box-shadow generator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="fonts/inter.css">
+    </head>
+    <body>
+        <div id="flex">
+            <div id="box_example"><p style="font-weight: bold; user-select: none;">Result:</p><p id="result"></p><div id="colorres" style="user-select: none;">Shadow color</div></div>
+            <section>
+                <h2>Parameters</h2>
+                <div id="list">
+                    <p>Border radius<br/><span>border-radius</span></p> <input type="text" id="p1" onchange="param_onchange()" value="4px">
+                    <p>X offset</p> <input type="text" id="p2" onchange="param_onchange()" value="0px">
+                    <p>Y offset</p> <input type="text" id="p3" onchange="param_onchange()" value="3px">
+                    <p>Blur radius</p> <input type="text" id="p4" onchange="param_onchange()" value="4px">
+                    <p>Растяжение</p> <input type="text" id="p5" onchange="param_onchange()" value="0px">
+                    <p>Color (R)</p> <input type="number" id="p6" onchange="param_onchange()" value="0">
+                    <p>Color (G)</p> <input type="number" id="p7" onchange="param_onchange()" value="0">
+                    <p>Color (B)</p> <input type="number" id="p8" onchange="param_onchange()" value="0">
+                    <p>Opacity (A)</p> <input type="number" id="p9" onchange="param_onchange()" value=".25">
+                </div>
+                <!--<button onclick="copy">Copy</button>-->
+            </section>
+        </div>
+        <p><a href="https://github.com/thundiverter" style="text-decoration: none; color: #3a3a3a; font-size: 90%">Made by Thundiverter</a></p>
+
+        <!-- Script -->
+        <script src="script.js"></script>
+    </body>
+</html>

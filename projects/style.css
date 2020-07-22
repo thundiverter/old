@@ -1,0 +1,118 @@
+body {
+  font-family: Inter, Helvetica, Arial;
+}
+
+div#flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 80vh;
+}
+
+div#box_example {
+  border: 1px solid #3a3a3a;
+  padding: 64px 32px 64px 32px;
+  min-width: 320px;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+div#box_example p {
+  margin: 2px;
+}
+
+div#box_example:hover {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  background-color: #dff;
+}
+
+#result {
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 6px 8px 6px 8px;
+  margin-left: 96px;
+  max-height: 640px;
+  width: 560px;
+  overflow-y: scroll;
+}
+
+section h2 {
+  margin: 0px 0px 6px 0px;
+}
+
+section button {
+  padding: 8px 32px 8px 32px;
+  margin: 2px 2px 2px 2px;
+}
+
+section div#list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% 60%;
+      grid-template-columns: 40% 60%;
+  grid-row-gap: 8px;
+  margin-bottom: 24px;
+}
+
+section div#list p {
+  margin: 2px;
+}
+
+section div#list input {
+  font-family: Inter, Helvetica, Arial;
+  font-size: 95%;
+  padding: 2px 6px 2px 6px;
+  outline: none;
+}
+
+#colorres {
+  margin-top: 16px;
+  padding: 6px 8px 6px 8px;
+  font-size: 80%;
+}
+
+span {
+  color: gray;
+}
+
+@media (max-width: 960px) {
+  div#flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: space-around;
+        -ms-flex-align: space-around;
+            align-items: space-around;
+  }
+  section {
+    margin: 16px auto;
+  }
+  section h2 {
+    display: none;
+  }
+  section div#list {
+    width: 100%;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
