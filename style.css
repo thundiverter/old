@@ -155,7 +155,7 @@ section {
   margin: 4px auto 4px auto;
 }
 
-section.projects {
+section#projects {
   max-width: 1360px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -188,7 +188,7 @@ a#projectbox {
   background-color: #F7F7F7;
   margin: 6px;
   width: 260px;
-  height: 240px;
+  height: 260px;
 }
 
 a#projectbox div#projects_image {
@@ -205,7 +205,7 @@ a#projectbox h3 {
 }
 
 a#projectbox p {
-  margin: 2px 18px 24px 18px;
+  margin: 2px 18px 0px 18px;
 }
 
 a#projectbox:hover {
@@ -284,5 +284,43 @@ footer ul li a:hover {
   h1, h2, h3, p.abouttext {
     margin-left: 28px;
   }
+}
+
+/* i */
+.i-list {
+  margin: 8px 12px 0px 12px;
+}
+
+#i, i-html, i-css, i-scss, i-js {
+  display: inline-block;
+  border-radius: 3px;
+  margin: 3px;
+  padding: 3px 5px 3px 5px;
+  font-size: 80%;
+  color: #fff;
+}
+
+i-html {
+  background-color: #C67733;
+  color: #fff;
+  font-size: 80%;
+}
+
+i-css {
+  background-color: #519ABA;
+  color: #fff;
+  font-size: 80%;
+}
+
+i-scss {
+  background-color: #D94A74;
+  color: #fff;
+  font-size: 80%;
+}
+
+i-js {
+  background-color: #CBCB3B;
+  color: #000;
+  font-size: 80%;
 }
 /*# sourceMappingURL=style.css.map */
