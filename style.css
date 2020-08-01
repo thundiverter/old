@@ -60,7 +60,7 @@
 
 body {
   margin: 0px;
-  background-color: #2E75B6;
+  background-color: #1F4E79;
   border-top: 8px solid #2E75B6;
   font-family: Inter, Roboto, Helvetica, Arial;
   display: -webkit-box;
@@ -165,9 +165,9 @@ section#projects {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   padding-bottom: 12px;
 }
 
@@ -188,11 +188,11 @@ a#projectbox {
   background-color: #F7F7F7;
   margin: 6px;
   width: 260px;
-  height: 260px;
 }
 
 a#projectbox div#projects_image {
   border-radius: 8px 8px 0px 0px;
+  width: 260px;
   height: 120px;
   background-position: center;
   background-repeat: no-repeat;
@@ -259,27 +259,27 @@ footer ul li a:hover {
     margin-left: auto;
     margin-right: auto;
   }
-  a:nth-child(1) {
-    width: 100%;
-    text-align: center;
-  }
   header {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
+  header a:nth-child(1) {
+    width: 100%;
+    text-align: center;
+  }
   header a {
     margin: 0;
   }
   header a img {
-    padding-left: 28px;
+    margin-left: 0px;
   }
 }
 
 /* other */
 @media (max-width: 1320px) {
   header a img {
-    padding-left: 28px;
+    margin-left: 28px;
   }
   h1, h2, h3, p.abouttext {
     margin-left: 28px;
@@ -288,7 +288,7 @@ footer ul li a:hover {
 
 /* i */
 .i-list {
-  margin: 8px 12px 0px 12px;
+  margin: 8px 12px 10px 12px;
 }
 
 #i, i-html, i-css, i-scss, i-js {
@@ -322,5 +322,25 @@ i-js {
   background-color: #CBCB3B;
   color: #000;
   font-size: 80%;
+}
+
+/* Made by Thundiverter */
+#madebythundiverter {
+  width: 100%;
+  margin-top: 32px;
+  padding: 12px 0px 12px 0px;
+  background-color: #1F4E79;
+  color: #fff;
+  font-size: 90%;
+  text-align: center;
+}
+
+#madebythundiverter a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#madebythundiverter a:hover {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=style.css.map */
