@@ -272,7 +272,10 @@ footer ul li a:hover {
     margin: 0;
   }
   header a img {
-    margin-left: 0px;
+    margin: 0px;
+  }
+  header a:nth-child(1) {
+    margin-top: 8px;
   }
 }
 
