@@ -291,7 +291,7 @@ footer ul li a:hover {
   margin: 8px 12px 10px 12px;
 }
 
-#i, i-html, i-css, i-scss, i-js {
+#i, i-html, i-css, i-scss, i-js, i-py, i-gdscript, i-cpp {
   display: inline-block;
   border-radius: 3px;
   margin: 3px;
@@ -320,6 +320,24 @@ i-scss {
 
 i-js {
   background-color: #CBCB3B;
+  color: #000;
+  font-size: 80%;
+}
+
+i-py {
+  background-color: #3C78A8;
+  color: #000;
+  font-size: 80%;
+}
+
+i-gdscript {
+  background-color: #478CBF;
+  color: #000;
+  font-size: 80%;
+}
+
+i-cpp {
+  background-color: #519ABA;
   color: #000;
   font-size: 80%;
 }
