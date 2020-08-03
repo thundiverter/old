@@ -1,39 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    
     <head>
         <meta charset="UTF-8">
+        <title>Contact - Thundiverter</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contacts - Thundiverter</title>
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/styles/style.css">
         <link rel="stylesheet" href="/fonts/inter.css">
     </head>
 
     <body>
+        <script src="/scripts/vue.min.js"></script>
+
         <div id="whitespace">
-            <header>
-                <a href="/"><img src="/images/biglogo.svg" width="48px"></a>
-                <a href="/" style="margin-right: auto;" id="nomobile"><h1>Thundiverter</h1></a>
-                <a href="/projects/" id="link">Projects</a>
-                <a href="#" id="link" style="font-weight: 900">Contact</a>
+            <a href="/"><img id="mobileonly" class="mobilelogo" src="/images/logo.svg" width="48px" style="margin: 12px auto"></a>
+            <header id="mobileonly">
+                <a href="/projects" id="link">Projects</a>
+                <a href="/contact" id="link" style="font-weight: 800;">Contact</a>
+            </header>
+            <header id="nomobile">
+                <a href="/"><img src="/images/logo.svg" id="nomoblogo"></a>
+                <a href="/"><h1>Thundiverter</h1></a>
+                <a href="/projects" id="link">Projects</a>
+                <a href="/contact" id="link" style="font-weight: 800;">Contact</a>
             </header>
         </div>
 
         <div id="grayspace">
-            <section id="projects">
-                <a id="projectbox" class="cat_tools" class="cat_websites" href="https://twitter.com/thundiverter" style="width: 240px">
-                    <div id="projects_image" style="background-image: url(/images/projecttwitter.png); width: 240px"></div><h3>Twitter</h3>
-                    <p style="margin-bottom: 16px">@thundiverter</p>
-                </a>
-                <a id="projectbox" class="cat_tools" class="cat_websites" href="https://github.com/Thundiverter" style="width: 240px">
-                    <div id="projects_image" style="background-image: url(/images/projectgithub.png); width: 240px"></div><h3>GitHub</h3>
-                    <p style="margin-bottom: 16px">@Thundiverter</p>
-                </a>
-                <a id="projectbox" class="cat_tools" class="cat_websites" href="https://community.fandom.com/wiki/User:StickManReally" style="width: 240px">
-                    <div id="projects_image" style="background-image: url(/images/projectfandom.png); width: 240px"></div><h3>FANDOM</h3>
-                    <p style="margin-bottom: 16px">StickManReally</p>
-                </a>
+            <section id="projectsList">
+
+                <div id="projectBox" style="width: 240px">
+                    <a href="https://twitter.com/thundiverter">
+                        <div id="projectBoxImage" style="background-image: url(/images/projecttwitter.png); width: 240px"></div><h3>Twitter</h3>
+                        <p style="margin-bottom: 16px">@thundiverter</p>
+                    </a>
+                </div>
+                <div id="projectBox" style="width: 240px">
+                    <a href="https://github.com/Thundiverter">
+                        <div id="projectBoxImage" style="background-image: url(/images/projectgithub.png); width: 240px"></div><h3>GitHub</h3>
+                        <p style="margin-bottom: 16px">@Thundiverter</p>
+                    </a>
+                </div>
+                <div id="projectBox" style="width: 240px">
+                    <a href="https://community.fandom.com/wiki/User:StickManReally">
+                        <div id="projectBoxImage" style="background-image: url(/images/projectfandom.png); width: 240px"></div><h3>FANDOM</h3>
+                        <p style="margin-bottom: 16px">StickManReally</p>
+                    </a>
+                </div>
+
             </section>
         </div>
 
@@ -48,12 +63,17 @@
                         <li><a href="https://codewars.com/Thundiverter">Codewars</a></li>
                     </ul>
                 </div>
+                <!--<p>Images and icons by <a href="https://icons8.ru">icons8.ru</a></p>-->
             </footer>
         </div>
-        
+
         <div id="madebythundiverter">
             Made by <a href="https://thundiverter.github.io">Thundiverter</a>
         </div>
+
+        <!-- Scripts -->
+        <script src="/scripts/projectsList.js"></script>
+        <script src="/scripts/date_design.js"></script>
     </body>
 
 </html>

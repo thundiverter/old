@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Projects - Thundiverter</title>
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="/style.css">
-        <link rel="stylesheet" href="projects.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/styles/style.css">
         <link rel="stylesheet" href="/fonts/inter.css">
     </head>
 
     <body>
+        <script src="/scripts/vue.min.js"></script>
+
         <div id="whitespace">
-            <header>
-                <a href="/"><img src="/images/biglogo.svg" width="48px"></a>
-                <a href="/" style="margin-right: auto;" id="nomobile"><h1>Thundiverter</h1></a>
-                <a href="/projects/" id="link" style="font-weight: 900">Projects</a>
-                <a href="/contact/" id="link">Contact</a>
+            <a href="/"><img id="mobileonly" class="mobilelogo" src="/images/logo.svg" width="48px" style="margin: 12px auto"></a>
+            <header id="mobileonly">
+                <a href="/projects" id="link" style="font-weight: 800;">Projects</a>
+                <a href="/contact" id="link">Contact</a>
+            </header>
+            <header id="nomobile">
+                <a href="/"><img src="/images/logo.svg" id="nomoblogo"></a>
+                <a href="/"><h1>Thundiverter</h1></a>
+                <a href="/projects" id="link"  style="font-weight: 800;">Projects</a>
+                <a href="/contact" id="link">Contact</a>
             </header>
         </div>
 
         <div id="grayspace">
-            <section class="categories">
-                <h3 onclick="tab_all()" style="display: inline-block; border-bottom: 3px solid black;">All</h3>
+            <section>
+                <h3 style="display: inline-block; border-bottom: 3px solid black; margin: 8px 0px 0px 0px;">All</h3>
             </section>
-            <section id="projects">
-                <a id="projectbox" class="cat_websites" href="https://github.com/Thundiverter/thundiverter.github.io">
-                    <div id="projects_image" style="background-image: url(/images/project3.png);"></div><h3>Thundiverter.github.io</h3><p>My website. The one you are currently watching.</p>
-                    <div class="i-list">
-                        <i-html>HTML</i-html><i-scss>SCSS</i-scss>
-                    </div>
-                </a>
-                <a id="projectbox" class="cat_websites" href="https://github.com/Thundiverter/minecraft-quick-guide">
-                    <div id="projects_image" style="background-image: url(/images/project2.png);"></div><h3>Minecraft Quick Guide</h3><p>All potion recipes and enchantments in a table</p>
-                    <div class="i-list">
-                        <i-html>HTML</i-html><i-scss>SCSS</i-scss>
-                    </div>
-                </a>
-                <a id="projectbox" class="cat_tools" class="cat_websites" href="https://github.com/Thundiverter/box-shadow-generator">
-                    <div id="projects_image" style="background-image: url(/images/project1.png);"></div><h3>Box-shadow Generator</h3><p>Visual CSS box-shadow generator</p>
-                    <div class="i-list">
-                        <i-html>HTML</i-html><i-scss>SCSS</i-scss><i-js>JS</i-js>
-                    </div>
-                </a>
+        </div>
+        <div id="grayspace">
+            <section id="projectsList">
+                <div id="projectBox" v-for="item in projects">
+                    <a v-bind:href="item.link">
+                        <div id="projectBoxImage" v-bind:style=" {'background-image' : 'url(/images/' + item.image + ')' } "></div>
+                        <h3>{{ item.title }}</h3>
+                        <p>{{ item.desc }}</p>
+                        <div id="i-list">
+                            <i-html v-if='item.html'>HTML</i-html><i-css v-if='item.css'>CSS</i-css><i-scss v-if='item.scss'>SCSS</i-scss><i-js v-if='item.js'>JS</i-js><i-vue v-if='item.vue'>Vue</i-vue><i-cpp v-if='item.cpp'>C++</i-cpp><i-py v-if='item.py'>Python</i-py><i-gdscript v-if='item.gdscript'>GDScript</i-gdscript>
+                        </div>
+                    </a>
+                </div>
             </section>
         </div>
 
@@ -58,12 +58,17 @@
                         <li><a href="https://codewars.com/Thundiverter">Codewars</a></li>
                     </ul>
                 </div>
+                <!--<p>Images and icons by <a href="https://icons8.ru">icons8.ru</a></p>-->
             </footer>
         </div>
-        
+
         <div id="madebythundiverter">
             Made by <a href="https://thundiverter.github.io">Thundiverter</a>
         </div>
+
+        <!-- Scripts -->
+        <script src="/scripts/projectsList.js"></script>
+        <script src="/scripts/date_design.js"></script>
     </body>
 
 </html>
