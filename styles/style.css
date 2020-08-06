@@ -168,6 +168,10 @@ header#nomobile a:nth-child(4) {
   text-align: center;
 }
 
+header#nomobile a#link {
+  text-decoration: none;
+}
+
 header#nomobile a#link:hover {
   font-weight: 800;
   background: #fafafa;
@@ -277,7 +281,7 @@ section#projectsList {
   margin: 8px 12px 10px 12px;
 }
 
-#i, i-html, i-css, i-scss, i-js, i-vue, i-py, i-gdscript, i-cpp {
+#i, i-html, i-css, i-scss, i-js, i-vue, i-py, i-gdscript, i-cpp, i-md, i-art {
   display: inline-block;
   border-radius: 3px;
   margin: 3px;
@@ -330,6 +334,18 @@ i-gdscript {
 
 i-cpp {
   background-color: #519ABA;
+  color: #fff;
+  font-size: 80%;
+}
+
+i-md {
+  background-color: #757474;
+  color: #fff;
+  font-size: 80%;
+}
+
+i-art {
+  background-color: #3F3F74;
   color: #fff;
   font-size: 80%;
 }

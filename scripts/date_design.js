@@ -9,3 +9,11 @@ if (date.getMonth() === 11 && date.getDate() >= 20 && date.getDate() <= 31) {
     logo.style.width = '56px';
     logo2.style.width = '56px';
 }
+
+/* ~._.~ */
+if (date.getMonth() === 4 && date.getDate() == 23) {
+    logo.src = '/images/logo_bday.svg';
+    logo2.src = '/images/logo_bday.svg';
+    logo.style.width = '56px';
+    logo2.style.width = '56px';
+}

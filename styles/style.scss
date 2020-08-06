@@ -43,6 +43,7 @@ header#nomobile {
         &#link {
             &:hover { font-weight: 800; background: darken(#ffffff, 2%); }
             &:active { font-weight: 800; background: darken(#ffffff, 6%); }
+            text-decoration: none;
         }
     }
 }
@@ -108,6 +109,9 @@ i-vue { background-color: #41B883; color: #fff; font-size: 80%; @extend #i } ;
 i-py { background-color: #3C78A8; color: rgbfff(163, 155, 155); font-size: 80%; @extend #i } ;
 i-gdscript { background-color: #478CBF; color: #fff; font-size: 80%; @extend #i } ;
 i-cpp { background-color: #519ABA; color: #fff; font-size: 80%; @extend #i } ;
+
+i-md { background-color: #757474; color: #fff; font-size: 80%; @extend #i } ;
+i-art { background-color: #3F3F74; color: #fff; font-size: 80%; @extend #i } ;
 
 /* Footer */
 footer {
