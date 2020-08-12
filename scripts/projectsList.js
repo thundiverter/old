@@ -22,7 +22,7 @@ let projectsList = [
         link: 'https://github.com/Thundiverter/thundiverter.github.io', pin: true,
         desc_ru: 'Мой сайт. Тот, на который вы сейчас смотрите.' },
     { title: 'JS Tabs', image: 'projectjs.png', html: true, scss: true, js: true, link: 'https://github.com/Thundiverter/js-tabs', },
-    { title: 'JS Get Key Info', image: 'js-get-key-info.png', html: true, scss: true, js: true, link: 'https://github.com/Thundiverter/js-get-key-info' },
+    { title: 'JS Get Key Info', image: 'js-get-key-info.png', html: true, scss: true, js: true, link: 'https://github.com/Thundiverter/js-get-key-info', pin: true },
     { title: 'JS Animated Menu', image: 'js-animated-menu.png', html: true, scss: true, js: true, link: 'https://github.com/Thundiverter/js-animated-menu' },
     { title: 'GetSym', image: 'py-getsym.png', py: true, link: 'https://github.com/Thundiverter/GetSym' },
 ];
