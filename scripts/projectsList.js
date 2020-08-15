@@ -26,6 +26,7 @@ let projectsList = [
     { title: 'JS Animated Menu', image: 'js-animated-menu.png', html: true, scss: true, js: true, link: 'https://github.com/Thundiverter/js-animated-menu' },
     { title: 'GetSym', image: 'py-getsym.png', py: true, link: 'https://github.com/Thundiverter/GetSym' },
     { title: 'JS Canvas', image: 'js-canvas.png', html: true, js: true, link: 'https://github.com/Thundiverter/js-canvas' },
+	{ title: 'JS Calculator', image: 'js-calculator.png', desc: 'Simple calculator made using JavaScript', html: true, scss: true, js: true, link: 'https://github.com/Thundiverter/js-calculator', pin: true },
 ];
 
 let app = new Vue ({
