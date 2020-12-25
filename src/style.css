@@ -339,6 +339,10 @@ footer section p a:hover {
 /* MEDIA */
 @media (max-width: 601px) {
 	header section {
+		flex-direction: column;
+		align-items: center;
+	}
+	nav {
 		justify-content: center;
 	}
 	header section a > h1 {
