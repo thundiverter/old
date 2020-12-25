@@ -1,93 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
-    
-    <head>
-        <meta charset="UTF-8">
-        <title>Thundiverter</title>
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="theme-color" content="#2E75B6">
-        <link rel="stylesheet" href="/styles/style.css">
-        <link rel="stylesheet" href="/fonts/inter.css">
-    </head>
+<html>
+	<head>
+		<title>Thundiverter</title>
+		<link rel="stylesheet" href="src/style.css">
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+	</head>
+	
+	<body>
+		<header>
+			<section>
+				<a href="#"><img class="logo" src="img/logo.svg"><h1>Thundiverter</h1></a>
+				<nav>
+					<a href="#projects">Projects</a>
+					<a href="#contacts">Contacts</a>
+				</nav>
+			</section>
+		</header>
 
-    <body>
-        <script src="/scripts/vue.min.js"></script>
+		<main>
+			
+			<article class="greeting">
+				<section>
+					<div>
+						<h2>Hi <span class="wavehand">👋</span></h2>
+						<p>My name's Ivan. I enjoy doing various frontend stuff. I'm also fond of game development.</p>
+					</div>
+				</section>
+			</article>
 
-        <div id="whitespace">
-            <a href="/"><img id="mobileonly" class="mobilelogo" src="/images/logo.svg" width="48px" style="margin: 12px auto"></a>
-            <header id="mobileonly">
-                <a href="/projects" id="link">Projects</a>
-                <a href="/contact" id="link">Contact</a>
-            </header>
-            <header id="nomobile">
-                <a href="/"><img src="/images/logo.svg" id="nomoblogo"></a>
-                <a href="/"><h1>Thundiverter</h1></a>
-                <a href="/projects" id="link">Projects</a>
-                <a href="/contact" id="link">Contact</a>
-            </header>
-        </div>
+			<article class="secondary-bg">
+				<section>
+					<h2 id="projects">Projects</h2>
+					<div class="project-cats">
+						<button data-id="0">Favourite</button>
+						<button data-id="1">All</button>
+						<button data-id="2">Web</button>
+						<button data-id="3">Python</button>
+						<button data-id="4">Other</button>
+					</div>
+					<div class="flex" id="projectsListElem">
+						<!-- Cards will appear here -->
+					</div>
 
-        <div id="whitespace">
-            <section style="margin-bottom: 24px;">
-                <p class="abouttext">Beginning web developer. Also interested in game development.</p>
-            </section>
-        </div>
+				</section>
+			</article>
 
-        <div id="grayspace">
-            <section>
-                <h2>My projects</h2>
-            </section>
-        </div>
+		</main>
 
-        <div id="grayspace">
-            <section id="projectsList">
-                <div id="projectBox" v-for="item in projects.slice(0, 9)" v-if="item.pin">
-                    <a v-bind:href="item.link">
-                        <div id="projectBoxImage" v-bind:style=" {'background-image' : 'url(/images/' + item.image + ')' } "></div>
-                        <h3>{{ item.title }}</h3>
-                        <p>{{ item.desc }}</p>
-                        <div id="i-list">
-                            <i-html v-if='item.html'>HTML</i-html><i-css v-if='item.css'>CSS</i-css><i-scss v-if='item.scss'>SCSS</i-scss><i-js v-if='item.js'>JS</i-js><i-vue v-if='item.vue'>Vue</i-vue><i-cpp v-if='item.cpp'>C++</i-cpp><i-py v-if='item.py'>Python</i-py><i-gdscript v-if='item.gdscript'>GDScript</i-gdscript><i-md v-if='item.md'>Markdown</i-md><i-art v-if='item.art'>Art</i-art>
-                        </div>
-                    </a>
-                </div>
-                <div id="projectBox">
-                    <a href="/projects">
-                        <div id="projectBoxImage" style="background-image: url(/images/projectall.png)"></div>
-                        <h3 style="margin-bottom: 16px;">All projects</h3>
-                    </a>
-                </div>
-            </section>
-        </div>
+		<footer>
+			<section id="contacts">
+				<div class="footer-flex">
+					<a href="https://github.com/Thundiverter"><img src="img/icons8/gh0.svg"></a>
+					<a href="https://twitter.com/thundiverter"><img src="img/icons8/tw0.svg"></a>
+				</div>
+				<p>Icons by <a href="https://icons8.ru">icons8.ru</a></p>
+			</section>
+		</footer>
 
-        <div id="footerspace">
-            <footer>
-                <div>
-                    <ul>
-                        <li><a href="https://twitter.com/Thundiverter">Twitter</a></li>
-                        <li><a href="https://github.com/Thundiverter">GitHub</a></li>
-                        <li><a href="https://community.fandom.com/wiki/User:StickManReally">FANDOM</a></li>
-                        <li><a href="https://liquidcube.github.io">Liquid Cube Games</a></li>
-                        <li><a href="https://codewars.com/Thundiverter">Codewars</a></li>
-                    </ul>
-                    <p id="icons8">Icons by <a href="https://icons8.ru">icons8.ru</a></p>
-                </div>
-            </footer>
-        </div>
+		<div id="madebythundiverter">
+			Made by <a href="https://thundiverter.github.io">Thundiverter</a>
+		</div>
 
-        <div id="madebythundiverter">
-            Made by <a href="https://thundiverter.github.io">Thundiverter</a>
-        </div>
-
-        <!-- Scripts -->
-        <script src="/scripts/projectsList.js"></script>
-        <script src="/scripts/date_design.js"></script>
-        <script src="/scripts/translation.js"></script>
-    </body>
-
+		<!-- Scripts -->
+		<script src="src/main.js"></script>
+	</body>
 </html>
-
-<!--
-    Thundiverter, 2020
--->
