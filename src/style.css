@@ -318,7 +318,7 @@ footer section div a {
 	margin: 6px;
 }
 footer section div a img {
-	width: 3rem;
+	width: 2.5rem;
 }
 footer section div a img:active {
 	transform: var(--button-transform);
