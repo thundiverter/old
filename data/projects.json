@@ -1,81 +1,61 @@
 [
 	{
-		"title" : "Box-shadow Generator", "image": "project1.png", "desc": " Visual CSS box-shadow generator",
-		"desc-ru": "Визуальный генератор CSS-свойства box-shadow",
+		"t" : "Box-shadow Generator", "img": "project1.png", "desc": " Visual CSS box-shadow generator",
 		"html": true, "scss": true, "js": true,
-		"link": "https://github.com/Thundiverter/box-shadow-generator", "pin": true
+		"url": "https://github.com/Thundiverter/box-shadow-generator", "pin": true
 	},
 	
 	{
-		"title" : "Minecraft Quick Guide", "image": "project2.png", "desc": "All potion recipes in a table",
-		"desc-ru": "Все рецепты зелий в виде таблицы",
+		"t" : "Minecraft Quick Guide", "img": "project2.png", "desc": "All potion recipes in a table",
 		"html": true, "scss": true, "js": true,
-		"link": "https://github.com/Thundiverter/minecraft-quick-guide", "pin": true
+		"url": "https://github.com/Thundiverter/minecraft-quick-guide", "pin": true
 	},
 	
 	{
-		"title" : "thundiverter.github.io", "image": "project3.png", "desc": "My website. The one you are currently watching",
-		"desc-ru": "Визуальный генератор CSS-свойства box-shadow",
+		"t" : "thundiverter.github.io", "img": "project3.png", "desc": "My website. The one you are currently watching",
 		"html": true, "scss": true, "js": true,
-		"link": "https://github.com/Thundiverter/thundiverter.github.io", "pin": true
+		"url": "https://github.com/Thundiverter/thundiverter.github.io", "pin": true
 	},
 	
 	{
-		"title" : "JS Tabs", "image": "projectjs.png",
+		"t" : "JS Tabs", "img": "projectjs.png",
 		"html": true, "scss": true, "js": true,
-		"link": "https://github.com/Thundiverter/js-tabs"
+		"url": "https://github.com/Thundiverter/js-tabs"
 	},
 	
 	{
-		"title" : "JS Get Key Info", "image": "js-get-key-info-2.png", "desc": "A simple tool that helps easily get information about any keyboard key",
-		"desc-ru": "Инструмент, позволяющий легко получить информацию о любой клавише на клавиатуре",
+		"t" : "JS Get Key Info", "img": "js-get-key-info-2.png", "desc": "A simple tool that helps easily get information about any keyboard key",
 		"html": true, "scss": true, "js": true,
-		"link": "https://github.com/Thundiverter/js-get-key-info", "pin": true
+		"url": "https://github.com/Thundiverter/js-get-key-info", "pin": true
 	},
 	
 	{
-		"title" : "JS Animated Menu", "image": "js-animated-menu.png",
-		"html": true, "scss": true, "js": true,
-		"link": "https://github.com/Thundiverter/js-animated-menu"
-	},
-	
-	{
-		"title" : "GetSym", "image": "py-getsym.png",
+		"t" : "GetSym", "img": "py-getsym.png",
 		"py": true,
-		"link": "https://github.com/Thundiverter/GetSym"
+		"url": "https://github.com/Thundiverter/GetSym"
 	},
 	
 	{
-		"title" : "JS Canvas", "image": "js-canvas.png",
-		"html": true, "js": true,
-		"link": "https://github.com/Thundiverter/js-canvas"
-	},
-	
-	{
-		"title" : "JS Calculator", "image": "js-calculator.png", "desc": "Simple calculator made using JavaScript",
-		"desc-ru": "Простой калькулятор, работающий на JS",
+		"t" : "JS Calculator", "img": "js-calculator.png", "desc": "Simple calculator made using JavaScript",
 		"html": true, "scss": true, "js": true,
-		"link": "https://github.com/Thundiverter/js-calculator", "pin": true
+		"url": "https://github.com/Thundiverter/js-calculator", "pin": true
 	},
 	
 	{
-		"title" : "JS Screen Size", "image": "jscr.png", "desc": "Get size of your screen",
-		"desc-ru": "Узнать размер своего экрана",
+		"t" : "JS Screen Size", "img": "jscr.png", "desc": "Get size of your screen",
 		"html": true, "css": true, "js": true,
-		"link": "https://github.com/Thundiverter/js-screensize"
+		"url": "https://github.com/Thundiverter/js-screensize"
 	},
 
 	{
-		"title" : "FANDOM Portable Infobox", "image": "projectfandom.png", "desc": "[RU] Various information about portable infoboxes",
-		"desc-ru": "Различная информация о модульных инфобоксах (на русском)",
+		"t" : "FANDOM Portable Infobox", "img": "projectfandom.png", "desc": "[RU] Various information about portable infoboxes",
 		"md": "true",
-		"link": "https://github.com/Thundiverter/fandom-portable-infobox", "pin": true
+		"url": "https://github.com/Thundiverter/fandom-portable-infobox", "pin": true
 	},
 	
 	{
-		"title" : "marked", "image": "markdown.png", "desc": "Preview parsed markdown files",
-		"desc-ru": "Preview parsed markdown files",
+		"t" : "marked", "img": "markdown.png", "desc": "Preview parsed markdown files",
 		"html": true, "css": true, "js": true,
-		"link": "https://github.com/Thundiverter/marked", "pin": true
+		"url": "https://github.com/Thundiverter/marked", "pin": true
 	}
 ]

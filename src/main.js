@@ -1,111 +1,112 @@
-// HOLIDAYS
-let date = new Date();
-let date_day = date.getDate();
-let date_month = date.getMonth();
+/* logo */
+let d = new Date();
 let logo = document.querySelector('.logo');
-
-function changeLogo() {
-    // New Year
-    if (date_month == 11 && date_day >= 20) {
-        logo.src = 'img/nylogo.svg';
-    }
-    if (date_month == 0 && date_day <= 6) {
-        logo.src = 'img/nylogo.svg';
-    }
-
-    // ~._.~
-    if (date_month == 4 && date_day == 23) {
-        logo.src = 'img/bdaylogo.svg';
-    }
+// New Year
+if ((d.getMonth() == 11 && d.getDate() >= 20) || (d.getMonth() == 0 && d.getDate() <= 6)) {
+    logo.src = 'img/nylogo.svg';
 }
-changeLogo();
+// ~._.~
+if (d.getMonth() == 4 && d.getDate() == 23) {
+    logo.src = 'img/bdaylogo.svg';
+}
 
-// PROJECTS
+
+/* projects */
 let list_projects;
 let projectTab = 0;
 
-function load(link) {
-    fetch(link)
-    .then(response => response.json())
-    .then(commits => {
-        list_projects = commits.reverse();
-    })
-    .then(()=>{projectTabF(list_projects, projectTab)});
-}
-load('data/projects.json');
-
-
-
+/* tab buttons */
+// nodelist of buttons
 let ptbtn = document.querySelectorAll('.project-cats button');
+projectTab = ptbtn[0].dataset.id;
+ptbtn[0].classList = 'current';
 
-
-ptbtn[projectTab].classList = 'current';
 // get & change tab id
 for (let i of ptbtn) {
     i.addEventListener('click', () => {
         projectTab = i.dataset.id;
+
         for (let j of ptbtn) {
             j.classList = '';
         }
-        ptbtn[projectTab].classList = 'current';
-        
-        projectTabF(list_projects, projectTab);
-    });
+
+        i.classList = 'current';
+        updateTabs();
+        //genTab(list_projects, 0);
+    })
 }
 
+// loads json
+function loadData(link) {
+    fetch(link)
+    .then(response => response.json())
+    .then(commits => {
+        list_projects = commits.reverse();
+        //console.log(list_projects);
+    })
+    .then(() => {
+        genAllTabs();
+    });
+}
+loadData('data/projects.json');
+
+/* generates tabs */
 // generates a card
-function projectBox(object) {
-    let res;
-    let obj = object;
-    let title = obj.title;
-    let img = obj.image;
-    let desc = obj.desc;
-    let link = obj.link;
+function genCard(obj) {
+    let res = '<a class="projectbox" href="' + obj.url + '">';
+    res += '<div id="img" style="background-image: url(\'img/' + obj.img + '\')"></div>';
+    res += '<h3>' + obj.t + '</h3>';
+    if (obj.desc) { res += '<p>' + obj.desc + '</p>' }
+
     // tags
-    let i_html = obj.html;
-    let i_css = obj.css;
-    let i_scss = obj.scss;
-    let i_js = obj.js;
-    let i_py = obj.py;
-    let i_gdscript = obj.gdscript;
-    let i_md = obj.md;
-    let i_vue = obj.vue;
-
-    res = '<a class="projectbox" href="' + link + '">';
-    if (img) { res += '<div id="img" style="background-image: url(\'img/' + img + '\')"></div>' }
-    else { res += '<h3>project3.png</h3>' }
-    if (title) { res += '<h3>' + title + '</h3>' }
-    if (desc) { res += '<p>' + desc + '</p>' }
     res += '<div class="tags">';
-
-    if (i_html) { res += '<i-html/>' }
-    if (i_css) { res += '<i-css/>' }
-    if (i_scss) { res += '<i-scss/>' }
-    if (i_js) { res += '<i-js/>' }
-    if (i_py) { res += '<i-py/>' }
-    if (i_gdscript) { res += '<i-gdscript/>' }
-    if (i_md) { res += '<i-md/>' }
-    if (i_vue) { res += '<i-vue/>' }
-
-    res += '</div></a>';
+    if (obj.html) { res += '<i-html/>' }
+    if (obj.css) { res += '<i-css/>' }
+    if (obj.scss) { res += '<i-scss/>' }
+    if (obj.js) { res += '<i-js/>' }
+    if (obj.py) { res += '<i-py/>' }
+    if (obj.gdscript) { res += '<i-gdscript/>' }
+    if (obj.md) { res += '<i-md/>' }
+    if (obj.vue) { res += '<i-vue/>' }
+    res += '</div>';
 
     return res;
 }
-projectBox({1:'1', 2:'3', 3: 'na'});
 
-let projectsListElem = document.querySelector('#projectsListElem');
+// // // // //
+// list of all tabs
+let plist = document.querySelectorAll('#projectsListElem');
+//console.log(plist);
+plist[projectTab].style.display = 'flex';
+
+// hides all tabs and shows the chosen one
+function updateTabs() {
+	for (let i of plist) {
+		i.style.display = 'none';
+	}
+	plist[projectTab].style.display = 'flex';
+	//console.log(projectTab);
+}
+
 // generates a tab
-function projectTabF(objects) {
-    let objsorted;
+function genTab(objs, id) {
+	let res = '';
+	for (let j of objs) {
+        if (id == 0 && !j.pin) { continue; }
+        if (id == 2 && !j.html) { continue; }
+        if (id == 3 && !j.py) { continue; }
+        if (id == 4 && (j.html || j.py)) { continue; }
+        res += genCard(j);
+    }
+    return res;
+}
 
-    projectsListElem.innerHTML = '';
-    let objs = objects;
-    for (let i of objs) {
-        if (projectTab == 0 && !i.pin) { continue; }
-        if (projectTab == 2 && !i.html) { continue; }
-        if (projectTab == 3 && !i.py) { continue; }
-        if (projectTab == 4 && (i.html || i.py)) { continue; }
-
-        projectsListElem.innerHTML += projectBox(i);
+// generates all tabs
+function genAllTabs() {
+    let index = 0;
+    for (let i of plist) {
+        i.innerHTML = genTab(list_projects, index);
+        //console.log(i.innerHTML);
+        index++;
     }
 }
