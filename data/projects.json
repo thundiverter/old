@@ -57,5 +57,11 @@
 		"t" : "marked", "img": "markdown.png", "desc": "Preview parsed markdown files",
 		"html": true, "css": true, "js": true,
 		"url": "https://github.com/Thundiverter/marked", "pin": true
+	},
+	
+	{
+		"t": "Masonry-like grid", "img": "masonry.png", "desc": "A Masonry-like (Pinterest-like) grid made with HTML and CSS (without JavaScript)",
+		"html": true, "css": true,
+		"url": "https://github.com/Thundiverter/masonry-grid", "pin": true
 	}
 ]
