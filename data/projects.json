@@ -63,5 +63,10 @@
 		"t": "Masonry-like grid", "img": "masonry.png", "desc": "A Masonry-like (Pinterest-like) grid made with HTML and CSS (without JavaScript)",
 		"html": true, "css": true,
 		"url": "https://github.com/Thundiverter/masonry-grid", "pin": true
+	},
+	
+	{
+		"t": "Frontend Stuff", "img": "project3.png",
+		"url": "https://github.com/Thundiverter/frontend-stuff"
 	}
 ]
