@@ -68,5 +68,11 @@
 	{
 		"t": "Frontend Stuff", "img": "project3.png",
 		"url": "https://github.com/Thundiverter/frontend-stuff"
+	},
+	
+	{
+		"t": "Symbols", "img": "symbols.png", "desc": "A big list of various symbols",
+		"html": true, "css": true, "js": true,
+		"url": "https://thundiverter.github.io/symbols/", "pin": true
 	}
 ]
