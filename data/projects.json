@@ -74,5 +74,10 @@
 		"t": "Symbols", "img": "symbols.png", "desc": "A big list of various symbols",
 		"html": true, "css": true, "js": true,
 		"url": "https://thundiverter.github.io/symbols/", "pin": true
+	},
+	{
+		"t": "Wordle Hub", "img": "wordlehub.jpg", "desc": "Quick way to find Wordle-like games",
+		"html": true, "css": true,
+		"url": "https://wordlehub.netlify.app", "pin": true
 	}
 ]
