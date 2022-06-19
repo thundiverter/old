@@ -79,11 +79,5 @@
 		"t": "Wordle Hub", "img": "wordlehub.jpg", "desc": "Quick way to find Wordle-like games",
 		"html": true, "css": true,
 		"url": "https://wordlehub.netlify.app", "pin": true
-	},
-	
-	{
-		"t" : "infege2022", "img": "project3.png", "desc": "[RU] Материалы и готовые решения для подготовки к Единому государственному экзамену по информатике",
-		"md": "true",
-		"url": "https://github.com/Thundiverter/infege2022"
 	}
 ]
